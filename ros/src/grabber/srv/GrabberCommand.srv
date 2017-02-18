@@ -1,0 +1,6 @@
+string command
+uint64 param
+---
+string command
+uint64 param
+uint8 success

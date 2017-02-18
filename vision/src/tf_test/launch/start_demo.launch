@@ -1,0 +1,10 @@
+<launch>
+        <node pkg="opencvtest" type="banana_test" name="banana_test" />
+
+        <node pkg="tf_test" type="tf_vid1_broadcaster" name="video1_tf_broadcaster" />
+        <node pkg="tf_test" type="tf_cam1_broadcaster" name="camera1_tf_broadcaster" />
+        <node pkg="tf_test" type="tf_googly_broadcaster" name="googly_tf_broadcaster" />
+
+        <node pkg="tf_test" type="tf_world_listener" name="listener" />
+</launch>
+

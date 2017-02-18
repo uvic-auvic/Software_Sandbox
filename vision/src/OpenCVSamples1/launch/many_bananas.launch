@@ -1,0 +1,14 @@
+<launch>
+        <node pkg="opencvtest" type="banana_test" name="banana_test1" />
+		<node pkg="opencvtest" type="banana_test" name="banana_test2" />
+		<node pkg="opencvtest" type="banana_test" name="banana_test3" />
+		<node pkg="opencvtest" type="banana_test" name="banana_test4" />
+		<node pkg="opencvtest" type="banana_test" name="banana_test5" />
+ 		<node pkg="opencvtest" type="banana_test" name="banana_test6" />
+   		<node pkg="opencvtest" type="banana_test" name="banana_test7" />
+		<node pkg="opencvtest" type="banana_test" name="banana_test8" />
+		
+
+
+</launch>
+

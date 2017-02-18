@@ -1,0 +1,5 @@
+int32 gaussianScalar_
+int32 edgeScalar_
+int32 maxAngle_
+int32 minAngle_
+int32 maxVertices_

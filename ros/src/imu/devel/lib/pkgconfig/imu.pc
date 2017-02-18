@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/src/imu/devel
+
+Name: imu
+Description: Description of imu
+Version: 0.0.0
+Cflags: -I/home/odroid/catkin_ws/src/imu/devel/include
+Libs: -L/home/odroid/catkin_ws/src/imu/devel/lib 
+Requires: message_runtime

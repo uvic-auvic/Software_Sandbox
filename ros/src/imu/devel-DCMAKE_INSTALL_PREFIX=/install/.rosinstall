@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/odroid/catkin_ws/src/imu/devel-DCMAKE_INSTALL_PREFIX=../install/setup.sh
