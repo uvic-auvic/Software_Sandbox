@@ -15,6 +15,6 @@ libraries and algorithms used by AUVic.
 - [ROS](ros/)
 - [OpenCV](vision/)
 - [Qt](qt/)
-- Gazebo
-- Linux
-
+- [Gazebo](gazebo/)
+- [Linux](linux/)
+- [System Tests](system_tests/)
