@@ -10,8 +10,7 @@ ROS is an interprocess-communication framework which will be at the core of our 
 
 [Installing 3rd Party packages]()
 
-
-## How do I use ROS
+[Using ROS with C++]()
 
 ## Practice Excercises
 1. Exc One
