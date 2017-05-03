@@ -2,7 +2,7 @@
 
 ROS is an interprocess-communication framework which will be at the core of our software. Each subsystem acts as a node which can talk to other subsystems by using the ROS' topic and service model.
 
-## How do I install ROS
+[Installing ROS](https://github.com/uvic-auvic/Software_Sandbox/wiki/Installing-ROS)
 
 ## How do I use ROS
 
