@@ -4,6 +4,13 @@ ROS is an interprocess-communication framework which will be at the core of our 
 
 [Installing ROS](https://github.com/uvic-auvic/Software_Sandbox/wiki/Installing-ROS)
 
+[Organising ROS Node packages]()
+
+[Building and Compiling our project]()
+
+[Installing 3rd Party packages]()
+
+
 ## How do I use ROS
 
 ## Practice Excercises
