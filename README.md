@@ -13,8 +13,8 @@ libraries and algorithms used by AUVic.
 ## Areas of Interest
 
 - [ROS](ros/)
-- OpenCV
-- Qt
+- [OpenCV](vision/)
+- [Qt](qt/)
 - Gazebo
 - Linux
 
