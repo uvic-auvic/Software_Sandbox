@@ -18,3 +18,9 @@ ROS is an interprocess-communication framework which will be at the core of our 
 1. One
 2. Two
 3. Three
+
+# Official Tutorials
+
+If there are any unanswered questions, consult the official ROS tutorials from their webpage
+
+wiki.ros.org/ROS/Tutorials
