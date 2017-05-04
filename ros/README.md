@@ -6,7 +6,7 @@ ROS is an interprocess-communication framework which will be at the core of our 
 
 [Organising ROS workspaces](https://github.com/uvic-auvic/Software_Sandbox/wiki/Organising-ROS-Workspaces)
 
-[Organising ROS Packages and CMakeLists](https://github.com/uvic-auvic/Software_Sandbox/Organising-ROS-Packages-and-CMakeLists)
+[Organising ROS Packages and CMakeLists](https://github.com/Software_Sandbox/wiki/Organising-ROS-Packages-and-CMakeLists)
 
 [Installing 3rd Party packages]()
 
