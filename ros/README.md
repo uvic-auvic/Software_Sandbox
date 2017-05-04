@@ -4,13 +4,15 @@ ROS is an interprocess-communication framework which will be at the core of our 
 
 [Installing ROS](https://github.com/uvic-auvic/Software_Sandbox/wiki/Installing-ROS)
 
-[Organising ROS Node packages]()
+[Organising ROS workspaces](https://github.com/uvic-auvic/Software_Sandbox/wiki/Organising-ROS-Workspaces)
 
-[Building and Compiling our project]()
+[Organising ROS Packages and CMakeLists](https://github.com/uvic-auvic/Software_Sandbox/Organising-ROS-Packages-and-CMakeLists)
 
 [Installing 3rd Party packages]()
 
 [Using ROS with C++]()
+
+[Executing ROS packages and Roslaunch]()
 
 ## Practice Excercises
 1. Exc One
