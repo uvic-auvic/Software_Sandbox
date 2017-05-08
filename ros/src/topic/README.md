@@ -8,7 +8,7 @@ You can have multiple publishers all publishing to a topic. A simple publisher c
 
 # Subscribers
 
-You can have multiple subscribers subscribed to a topic. A simple subscriber can be found [here](/ros/src/topic/src/subscriber)
+You can have multiple subscribers subscribed to a topic. A simple subscriber can be found [here](/ros/src/topic/src/subscriber.cpp)
 # ROS Wiki Tutorial
 
 [Take a look at the example here for more detail](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
