@@ -1,4 +1,4 @@
-# Robotic Operation System
+# Robotic Operating System
 
 ROS is an interprocess-communication framework which will be at the core of our software. Each subsystem acts as a node which can talk to other subsystems by using the ROS' topic and service communications.
 
