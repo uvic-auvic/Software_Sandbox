@@ -1,0 +1,20 @@
+<launch>        
+        <!--Global Argument Definitions-->
+
+        <!--Environment Variables-->
+        <arg name="override_local_launch" value="true"/>
+
+        <!--Motors-->
+        <!--If the override flag is true, we override the local.launchfile which means we can use different arguments-->
+        <group if="$(arg override_local_launch)">
+          <include file="$(find launchfile)/launchfiles/local.launch">
+            <!--Override the local launchfile 'PubName' with our value-->       
+            <arg name="PubName" value="Global_Pub_Name"/>
+          </include>
+        </group>
+        <!--This will be executed if the value is false, which means we use default values-->
+        <group unless="$(arg override_motor_controllers)">
+          <include file="$(find launchfile)/launchfiles/local.launch"/>
+        </group>
+
+</launch>
