@@ -1,4 +1,4 @@
-# ROS Topic Example
+# ROS Topics
 
 As mentioned previously, Topics are a way to transmit/recieve a continuous stream of data. On one end you have subscribers funnelling data into a topic and on the other end you have subscribers recieving and handling the data. This mechanism provides separation of the 2 entities and ensures their logic doesn't get mixed up.
 
