@@ -12,7 +12,7 @@ libraries and algorithms used by AUVic.
 
 ## Areas of Interest
 
-- [ROS](ros/)
+- [ROS](ros/src)
 - [OpenCV](vision/)
 - [Qt](qt/)
 - [Gazebo](gazebo/)
