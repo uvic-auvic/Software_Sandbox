@@ -1,14 +1,14 @@
-# ROS Topics
+# ROS Services
 
-As mentioned previously, Topics are a way to transmit/recieve a continuous stream of data. On one end you have subscribers funnelling data into a topic and on the other end you have subscribers recieving and handling the data. This mechanism provides separation of the 2 entities and ensures their logic doesn't get mixed up.
+A service is similar to a topic in the sense that their is a node on either end of it, but different in function an use. Service calls are typically made less frequently, and are usually done to perform an explicit action. For example one might perform a service call to modify parameters or to have request the vision node to perform a new processing technique on an image.
 
-# Publishers
+# Services
 
-You can have multiple publishers all publishing to a topic. A simple publisher can be found [here](/ros/src/topic/src/publisher.cpp)
+A service object is required for a service to be called/requested. A single node can operate multiple services. A simple service can be found [here](/ros/src/services/src/service.cpp)
 
-# Subscribers
+# Clients
 
-You can have multiple subscribers subscribed to a topic. A simple subscriber can be found [here](/ros/src/topic/src/subscriber.cpp)
+A client object is required to ask for a service to be done. A single node can have multiple client objects make requests. A simple client can be found [here](/ros/src/services/src/client.cpp)
 # ROS Wiki Tutorial
 
-[Take a look at the example here for more detail](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29)
+[Take a look at the example here for more detail](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29)
