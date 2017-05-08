@@ -1,43 +1,30 @@
 #include "ros/ros.h"
-#include "std_msgs/String.h"
-#include <sstream>
+#include "beginner_tutorials/AddTwoInts.h"
+#include <cstdlib>
 
-int main(int argc, char **argv) {
-    
-    // Same boilerplate ROS things as usual
-    ros::init(argc, argv, "talker");
-    ros::NodeHandle n;
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "add_two_ints_client");
+  if (argc != 3)
+  {
+    ROS_INFO("usage: add_two_ints_client X Y");
+    return 1;
+  }
 
-    // Set up the publisher which is the object which sends our messages
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter",5000);
+  ros::NodeHandle n;
+  ros::ServiceClient client = n.serviceClient<beginner_tutorials::AddTwoInts>("add_two_ints");
+  beginner_tutorials::AddTwoInts srv;
+  srv.request.a = atoll(argv[1]);
+  srv.request.b = atoll(argv[2]);
+  if (client.call(srv))
+  {
+    ROS_INFO("Sum: %ld", (long int)srv.response.sum);
+  }
+  else
+  {
+    ROS_ERROR("Failed to call service add_two_ints");
+    return 1;
+  }
 
-    // The rate at which we 'spin', i.e how often we send data out
-    ros::Rate loop_rate(10);
-
-    int count = 0;
-    while(ros::ok()) {
-        // ROS uses their own String implementation, which is what we need to send data through topics
-        std_msgs::String msg;
-
-        std::stringstream ss;
-        ss << "hello world" << count;
-        msg.data = ss.str();
-        
-        // Send out the data
-        chatter_pub.publish(msg);
-
-        // Let ROS do its thing
-        ros::spinOnce();
-
-        // sleep so we dont overrun our loop rate
-        loop_rate.sleep();
-    }
-
-    // We probaby never get here
-    return 0;   
+  return 0;
 }
-
-
- 
-
-

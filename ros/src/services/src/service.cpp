@@ -1,23 +1,22 @@
 #include "ros/ros.h"
-#include "std_msgs/String.h"
+#include "beginner_tutorials/AddTwoInts.h"
 
-void chatterCallback(const std_msgs::String::ConstPtr& msg) {
-    ROS_INFO("Message: %s", msg->data.c_str());
+bool add(beginner_tutorials::AddTwoInts::Request  &req,
+         beginner_tutorials::AddTwoInts::Response &res)
+{
+  res.sum = req.a + req.b;
+  ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
+  ROS_INFO("sending back response: [%ld]", (long int)res.sum);
+  return true;
 }
 
-int main(int argc, char **argv){
-    // setup the rosnode
-    ros::init(argc, argv, "listener");
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "add_two_ints_server");
+  ros::NodeHandle n;
 
-    // Add the node handle, so we can handle ros things
-    ros::NodeHandle n;
+  ros::ServiceServer service = n.advertiseService("add_two_ints", add);
+  ROS_INFO("Ready to add two ints.");
+  ros::spin();
 
-    // setup a subscriber. the "chatter" is the topic name
-    // The 1000 is the buffer size, so we can take 1000 messages before handling them
-    // chatterCallback is the function that does something with the topic message
-    ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
-
-    // This is basically the ros while-loop. Your callback can only be called if spinning
-    ros::spin();
-    return 0;
-}
+  return 0;
