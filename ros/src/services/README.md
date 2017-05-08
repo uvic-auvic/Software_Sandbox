@@ -9,6 +9,11 @@ A service object is required for a service to be called/requested. A single node
 # Clients
 
 A client object is required to ask for a service to be done. A single node can have multiple client objects make requests. A simple client can be found [here](/ros/src/services/src/client.cpp)
+
+# Important Note about ROS Msgs
+
+This example won't compile as is, unless you have the ROS beginner tutorials installed. You can modify it to work by removing the dependency on the beginner messages and [creating your own service msg](/ros/src/msg/).
+
 # ROS Wiki Tutorial
 
 [Take a look at the example here for more detail](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient%28c%2B%2B%29)
