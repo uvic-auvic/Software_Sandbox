@@ -8,7 +8,7 @@ libraries and algorithms used by AUVic.
 1. [Setup your Linux environment](https://github.com/uvic-auvic/Software_Sandbox/wiki/Setting-up-your-environment)
 2. [Learn the basic git commands we will be using](https://github.com/uvic-auvic/Software_Sandbox/wiki/Git-Workflow)
 3. Clone this repository (by following the instructions in the above step)
-4. In each different section are a series of wiki pages and excercises on getting started. Go through the ones which interest you
+4. Go through any of the below areas of interest which will introduce you to the various libraries we use. This is by no means a comprehensive tutorial but will hopefully give you a bit of an idea in how to make use of it and where to find more information.
 
 ## Areas of Interest
 
