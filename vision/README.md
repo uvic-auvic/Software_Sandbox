@@ -13,7 +13,7 @@ Right here!
 ## Different computer vision techniques
 
 - [Color Detection](src/colorDetection/)
-- second
+- [Classifier Detection](src/classifierDetection/)
 - Third
 - Fourth
 - Fifth
