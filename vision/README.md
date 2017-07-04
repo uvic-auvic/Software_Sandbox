@@ -14,6 +14,6 @@ Right here!
 
 - [Color Detection](src/colorDetection/)
 - [Classifier Detection](src/classifierDetection/)
-- Third
+- [Edge Detection](src/edgeDetection/)
 - Fourth
 - Fifth
