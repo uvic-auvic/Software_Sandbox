@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( edgeDetectionSample )
+find_package( OpenCV REQUIRED )
+add_executable( edgeDetectionSample edgeDetectionSample.cpp )
+target_link_libraries( edgeDetectionSample ${OpenCV_LIBS} )
