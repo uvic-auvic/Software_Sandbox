@@ -1,0 +1,4 @@
+<launch>        
+        <node name="class_pub" pkg="classes" type="class_pub" required="true"/>
+        <node name="class_sub" pkg="classes" type="class_sub" required="true"/>
+</launch>
