@@ -1,37 +1,27 @@
 #include <ros/ros.h>
 #include <serial/serial.h>
-#include <unistd.h>
-#include <stdio.h>
 
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "serialtest_node");
-    ros::NodeHandle nh_;
-    time_t timer, starttimer;
-    std::string teststring;
-    serial::Serial serialTestSerial("/dev/ttyAMA0",115200,serial::Timeout::simpleTimeout(100));
-    if(!serialTestSerial.isOpen())
+    ros::NodeHandle nh("~");
+
+    std::string port;
+    nh.getParam("port", port);
+
+    serial::Serial conn(port,115200,serial::Timeout::simpleTimeout(1000));
+    if(!conn.isOpen())
     {
-        std::cout << "Serial failed to open.";
+        ROS_ERROR("Serial failed to open");
+        return 1;
     }
+
     ros::Rate loop_rate(5);
-    int count = 0;
-    float timevpy;
-    time(&starttimer);
-    while(ros::ok())
-    {
-        std::stringstream ss;
-        ss << "hello world" << count;
-        serialTestSerial.write(ss.str());
-        serialTestSerial.read(teststring);
-        time(&timer);
-        timevpy = difftime(timer, starttimer);
-        ROS_INFO("Count: %d", count);
-        ROS_INFO("Time: %f", timevpy);
-        ros::spinOnce();
+    while(ros::ok()) {
+        conn.write("HELL");
+        std::string response = conn.readline(1000, "\n");
+        ROS_INFO("Rx from Serial Device: '%s'", response.c_str());
         loop_rate.sleep();
-        ++count;
     }
-    ros::shutdown();
     return 0;
 }

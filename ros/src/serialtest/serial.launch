@@ -1,0 +1,6 @@
+<launch>        
+    <arg name="emu_port" default="/dev/pts/23"/>
+    <node name="serialnode" pkg="serialtest" type="serialtest_node" required="true">
+        <param name="port" value="$(arg emu_port)"/>
+    </node>
+</launch>
