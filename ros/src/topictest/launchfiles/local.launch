@@ -1,0 +1,6 @@
+<launch>        
+        <arg name="myparam" default="A param"/>
+        <node name="publisher" pkg="topictest" type="publisher" required="true"/>
+        <node name="subscriber" pkg="topictest" type="subscriber" required="true"/>
+
+</launch>

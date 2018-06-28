@@ -13,23 +13,21 @@ set(CMAKE_CXX_FLAGS "-std=c++11")
 find_package(catkin REQUIRED
   roscpp
   rospy
-  std_msgs
   message_generation
 )
 ## Generate services in the 'srv' folder
-add_service_files(
+add_message_files(
    FILES
-   newmsg.srv
+   newmsg.msg
 )
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
    DEPENDENCIES
-   std_msgs  # Or other packages containing msgs
 )
 
 catkin_package(
-   CATKIN_DEPENDS message_runtime std_msgs
+   CATKIN_DEPENDS message_runtime roscpp
 )
 
 include_directories(
@@ -38,3 +36,13 @@ ${catkin_INCLUDE_DIRS})
 #####################################################################################
 # Binaries                                                                          #
 #####################################################################################
+
+include_directories(include ${catkin_INCLUDE_DIRS})
+
+add_executable(msg_pub src/msg_pub.cpp)
+target_link_libraries(msg_pub ${catkin_LIBRARIES})
+add_dependencies(msg_pub msg_generate_messages_cpp ${catkin_EXPORTED_TARGETS})
+
+add_executable(msg_sub src/msg_sub.cpp)
+target_link_libraries(msg_sub ${catkin_LIBRARIES})
+add_dependencies(msg_sub msg_generate_messages_cpp ${catkin_EXPORTED_TARGETS})

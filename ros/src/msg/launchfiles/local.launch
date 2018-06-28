@@ -1,0 +1,4 @@
+<launch>        
+        <node name="msg_pub" pkg="msg" type="msg_pub" required="true"/>
+        <node name="msg_sub" pkg="msg" type="msg_sub" required="true"/>
+</launch>
