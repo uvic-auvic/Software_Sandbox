@@ -1,5 +1,0 @@
-uint8 motor_number
-uint8 command_param
----
-string motor_response
-bool motor_success

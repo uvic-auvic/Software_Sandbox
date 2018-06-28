@@ -1,15 +1,14 @@
-#include "ros/ros.h"
-#include "std_msgs/String.h"
 #include <sstream>
+#include <ros/ros.h>
+#include "std_msgs/String.h"
+
 
 int main(int argc, char **argv) {
-    
-    // Same boilerplate ROS things as usual
     ros::init(argc, argv, "talker");
-    ros::NodeHandle n;
+    ros::NodeHandle nh;
 
     // Set up the publisher which is the object which sends our messages
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter",5000);
+    ros::Publisher chatter_pub = nh.advertise<std_msgs::String>("chatter",5000);
 
     // The rate at which we 'spin', i.e how often we send data out
     ros::Rate loop_rate(10);
@@ -20,7 +19,7 @@ int main(int argc, char **argv) {
         std_msgs::String msg;
 
         std::stringstream ss;
-        ss << "hello world" << count;
+        ss << "hello world " << count++;
         msg.data = ss.str();
         
         // Send out the data
@@ -33,7 +32,7 @@ int main(int argc, char **argv) {
         loop_rate.sleep();
     }
 
-    // We probaby never get here
+    // We never get here unless roscore quits
     return 0;   
 }
 

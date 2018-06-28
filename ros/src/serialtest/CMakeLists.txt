@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(serialTest)
+project(serialtest)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -30,5 +30,4 @@ include_directories(
 
 
 add_executable(serialtest_node src/serialtest_node.cpp)
-target_link_libraries(serialtest_node ${catkin_LIBRARIES})
-add_dependencies(serialtest_node serialTest)
+target_link_libraries(serialtest_node ${catkin_LIBRARIES} ${serial_LIBRARIES})

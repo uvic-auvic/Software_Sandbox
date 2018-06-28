@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package>
-  <name>launchfiles</name>
+  <name>topictest</name>
   <version>0.0.0</version>
   <description>The example package</description>
-  <maintainer email="kyle@todo.todo">kyle</maintainer>
+  <maintainer email="asinha@uvic.ca">anu</maintainer>
   <license>TODO</license>
+
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>std_msgs</build_depend>
-  <run_depend>roscpp</run_depend>
   <run_depend>std_msgs</run_depend>
-
+  <run_depend>roscpp</run_depend>
 </package>

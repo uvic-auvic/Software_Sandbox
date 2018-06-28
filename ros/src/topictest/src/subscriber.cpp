@@ -1,4 +1,4 @@
-#include "ros/ros.h"
+#include <ros/ros.h>
 #include "std_msgs/String.h"
 
 void chatterCallback(const std_msgs::String::ConstPtr& msg) {
@@ -10,12 +10,12 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "listener");
 
     // Add the node handle, so we can handle ros things
-    ros::NodeHandle n;
+    ros::NodeHandle nh;
 
     // setup a subscriber. the "chatter" is the topic name
     // The 1000 is the buffer size, so we can take 1000 messages before handling them
     // chatterCallback is the function that does something with the topic message
-    ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+    ros::Subscriber sub = nh.subscribe("chatter", 1000, chatterCallback);
 
     // This is basically the ros while-loop. Your callback can only be called if spinning
     ros::spin();

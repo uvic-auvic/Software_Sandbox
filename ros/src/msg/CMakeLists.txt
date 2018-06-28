@@ -2,7 +2,7 @@
 # CMake                                                                             #
 #####################################################################################
 cmake_minimum_required(VERSION 2.8.3)
-project(motor_controller)
+project(msg)
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
 #####################################################################################
@@ -15,12 +15,11 @@ find_package(catkin REQUIRED
   rospy
   std_msgs
   message_generation
-  serial
 )
 ## Generate services in the 'srv' folder
 add_service_files(
    FILES
-   motor_command.srv
+   newmsg.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
@@ -39,19 +38,3 @@ ${catkin_INCLUDE_DIRS})
 #####################################################################################
 # Binaries                                                                          #
 #####################################################################################
-
-## Required packages for linking
-find_package(serial REQUIRED)
-
-## Declare a C++ executable
-add_executable(motor_controller src/motor_controller.cpp)
-add_dependencies(motor_controller ${motor_controller_EXPORTED_TARGETS})
-target_link_libraries(motor_controller ${catkin_LIBRARIES} ${serial_LIBRARIES})
-
-add_executable(navigation src/navigation.cpp)
-add_dependencies(navigation ${motor_controller_EXPORTED_TARGETS})
-target_link_libraries(navigation ${catkin_LIBRARIES} ${serial_LIBRARIES})
-
-add_executable(motor_controller_client src/motor_controller_client.cpp)
-add_dependencies(motor_controller_client ${motor_controller_EXPORTED_TARGETS})
-target_link_libraries(motor_controller_client ${catkin_LIBRARIES} ${serial_LIBRARIES})

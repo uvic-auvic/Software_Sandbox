@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
     nh.getParam("publisher", publisher_name);
 
     // Set up the publisher which is the object which sends our messages
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>(publisher_name, 5000);
+    ros::Publisher chatter_pub = nh.advertise<std_msgs::String>(publisher_name, 5000);
 
     // The rate at which we 'spin', i.e how often we send data out
     ros::Rate loop_rate(10);
